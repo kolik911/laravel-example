@@ -20,7 +20,7 @@ class JobFactory extends Factory
         return [
             'title' => fake()->jobTitle(),
             'employer_id' => Employer::factory(),
-            'salary' => '$30,000 USD',
+            'salary' => '$' . number_format($this->faker->numberBetween(30000, 150000)) . ' USD',
         ];
     }
 }
